@@ -18,6 +18,8 @@ module.install = Presenta => {
   Presenta.addModule('markdown', module)
 }
 
+module.initBefore = true
+
 export default module
 
 if (typeof window !== 'undefined' && window.Presenta) {
