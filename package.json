@@ -1,6 +1,6 @@
 {
   "name": "@presenta/module-markdown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Presenta Text Block Add-On to have markdown to HTML conversion",
   "main": "index.js",
   "unpkg": "dist/presenta-module-markdown.min.js",
