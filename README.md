@@ -4,7 +4,7 @@ This controller extends the `text` block in a [PRESENTA Lib](https://github.com/
 
 ## Installation
 
-Please read the installation istructions for official plugins [here](https://lib.presenta.cc/extend/#install-an-official-plugin) using this unique identifier: `module-markdown`
+Please read the installation istructions for official plugins [here](https://lib.presenta.cc/extend/#install-an-official-plugin) using this unique identifier: `controller-markdown`
 
 ## Usage
 
