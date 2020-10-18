@@ -5,19 +5,28 @@ marked.setOptions({
   breaks: true
 })
 
-const controller = function (routerElement, router, ctrlConfig, projectConfig) {
+const controller = function (routerElement, router, ctrlConfig, projectConfig) {}
 
+const markdowns = []
+
+const addMarkdown = ob => {
+  const exists = markdowns.find(d => d.type === ob.type)
+  if (!exists) markdowns.push(ob)
+  console.log(markdowns)
 }
 
 controller.install = Presenta => {
-  Presenta.addModule('markdown', controller)
+  Presenta.addController('markdown', controller)
+  Presenta.io.addMarkdown = addMarkdown
 }
 
-controller.init = config => {
+controller.run = config => {
   config.scenes.forEach(s => {
     s.blocks.forEach(b => {
-      if (b.type === 'text') {
-        b.text = marked(b.text)
+      const blk = markdowns.find(d => d.type === b.type)
+      if (blk) {
+        b.markdown = b[blk.field]
+        b[blk.field] = marked(b[blk.field])
       }
     })
   })
