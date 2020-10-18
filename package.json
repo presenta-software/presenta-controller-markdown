@@ -1,10 +1,10 @@
 {
-  "name": "@presenta/module-markdown",
+  "name": "@presenta/controller-markdown",
   "version": "1.0.2",
   "description": "Presenta Text Block Add-On to have markdown to HTML conversion",
   "main": "index.js",
-  "unpkg": "dist/presenta-module-markdown.min.js",
-  "module": "dist/presenta-module-markdown.min.js",
+  "unpkg": "dist/presenta-controller-markdown.min.js",
+  "module": "dist/presenta-controller-markdown.min.js",
   "scripts": {
     "start": "rollup -c --watch",
     "bump": "npm run build && git add -u && git commit -m \"bump release\" && npm version patch && git push && npm publish",

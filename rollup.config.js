@@ -11,9 +11,9 @@ const terser = require('rollup-plugin-terser').terser
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/presenta-module-markdown.min.js',
+    file: 'dist/presenta-controller-markdown.min.js',
     format: 'umd',
-    name: 'PresentaModuleMarkdown',
+    name: 'PresentaControllerMarkdown',
     sourcemap: false
   },
   watch: {

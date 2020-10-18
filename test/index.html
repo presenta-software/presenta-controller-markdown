@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PresentaModuleMarkdown</title>
-    <script src="../dist/presenta-module-markdown.min.js"></script>
+    <title>PresentaControllerMarkdown</title>
+    <script src="../dist/presenta-controller-markdown.min.js"></script>
 </head>
 <body>
     <script>
-        var scene = {
-            blocks:[
+        var config = {
+            scenes:[
                 {
-                    type: 'text',
-                    text: '# Title'
+                    blocks:[
+                        {
+                            type: 'text',
+                            text: '# Title'
+                        }
+                    ]
                 }
             ]
         }
-        new PresentaModuleMarkdown(null, null, scene)
-        console.log(scene)
+        PresentaControllerMarkdown.init(config)
+        console.log(config)
     </script>
 </body>
 </html>

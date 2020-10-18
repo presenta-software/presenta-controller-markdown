@@ -5,23 +5,26 @@ marked.setOptions({
   breaks: true
 })
 
-const module = function (sceneElement, modConfig, sceneConfig, projectConfig) {
-  sceneConfig.blocks.forEach(block => {
-    if (block.type === 'text' && !block.marked) {
-      block.text = marked(block.text)
-      block.marked = true
-    }
+const controller = function (routerElement, router, ctrlConfig, projectConfig) {
+
+}
+
+controller.install = Presenta => {
+  Presenta.addModule('markdown', controller)
+}
+
+controller.init = config => {
+  config.scenes.forEach(s => {
+    s.blocks.forEach(b => {
+      if (b.type === 'text') {
+        b.text = marked(b.text)
+      }
+    })
   })
 }
 
-module.install = Presenta => {
-  Presenta.addModule('markdown', module)
-}
-
-module.initBefore = true
-
-export default module
+export default controller
 
 if (typeof window !== 'undefined' && window.Presenta) {
-  window.Presenta.use(module)
+  window.Presenta.use(controller)
 }

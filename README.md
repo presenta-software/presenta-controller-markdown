@@ -1,6 +1,6 @@
-# Presenta Markdown Module
+# Presenta Markdown Controller
 
-This module extends the `text` block in a [PRESENTA Lib](https://github.com/presenta-software/presenta-lib) document adding automatic markdown conversion.
+This controller extends the `text` block in a [PRESENTA Lib](https://github.com/presenta-software/presenta-lib) document adding automatic markdown conversion.
 
 ## Installation
 
@@ -12,7 +12,7 @@ To configure this module use this setting:
 
 ```js
 {
-    modules:{
+    controller:{
       markdown:true
     }
 }
