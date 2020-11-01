@@ -12,7 +12,6 @@ const markdowns = []
 const addMarkdown = ob => {
   const exists = markdowns.find(d => d.type === ob.type)
   if (!exists) markdowns.push(ob)
-  console.log(markdowns)
 }
 
 controller.install = Presenta => {
