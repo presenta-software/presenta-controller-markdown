@@ -24,7 +24,6 @@ controller.run = config => {
     s.blocks.forEach(b => {
       const blk = markdowns.find(d => d.type === b.type)
       if (blk) {
-        b.markdown = b[blk.field]
         b[blk.field] = marked(b[blk.field])
       }
     })

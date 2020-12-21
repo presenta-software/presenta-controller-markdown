@@ -20,7 +20,22 @@
                 }
             ]
         }
-        PresentaControllerMarkdown.init(config)
+
+
+        // this emulates the presence of the library init process
+        const mockPresenta = {
+            addController: () => {},
+            io:{}
+        }
+        PresentaControllerMarkdown.install(mockPresenta)
+        //
+
+        // this emulates the block that wants to use this controller
+        mockPresenta.io.addMarkdown({type:'text', field:'text'})
+        // end
+
+        PresentaControllerMarkdown.run(config)
+
         console.log(config)
     </script>
 </body>
