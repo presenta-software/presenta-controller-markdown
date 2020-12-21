@@ -1,33 +1,27 @@
 # Presenta Markdown Controller
 
-This controller extends the `text` block in a [PRESENTA Lib](https://github.com/presenta-software/presenta-lib) document adding automatic markdown conversion.
+![](https://img.shields.io/npm/v/@presenta/controller-markdown)
 
-## Installation
+This controller adds markdown to HTML conversion to compatible blocks in a [PRESENTA Lib](https://github.com/presenta-software/presenta-lib) document.
 
-Please read the installation istructions for official plugins [here](https://lib.presenta.cc/extend/#install-an-official-plugin) using this unique identifier: `controller-markdown`
+## Documentation
 
-## Usage
+Full documentation can be found [here](https://lib.presenta.cc/plugins/controllers/markdown).
 
-To configure this module use this setting:
+## Contribute
 
-```js
-{
-    controller:{
-      markdown:true
-    }
-}
-```
+### Development
 
+To start a development session:
 
-## Development
+	npm start
 
-Run the watcher:
+To build a release:
 
-    npm start
+	npm run build
 
-and the local webserver
+## Licence
 
-    npm run test
+This plugin is released under the [3-Clause BSD license](LICENSE).
 
-
-
+Copyright © 2020 Fabio Franchino, [https://fabiofranchino.com](https://fabiofranchino.com)
